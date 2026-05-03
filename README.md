@@ -56,14 +56,26 @@ git push -u origin main
 
 ## GitHub Pages
 
-仓库里已经放了 `.github/workflows/pages.yml`，推到 GitHub 后可以直接启用 Pages 自动发布。
+这个仓库按静态站点方式发布，推到 GitHub 后可以直接启用 Pages。
 
-如果你想手动开 Pages，也可以在 GitHub 仓库设置里选择：
+如果你想手动检查 Pages 设置，也可以在 GitHub 仓库设置里选择：
 
 - `Settings`
 - `Pages`
 - `Build and deployment`
-- `Source: GitHub Actions`
+- `Source: Deploy from a branch`
+- `Branch: main`
+- `Folder: / (root)`
+
+如果你希望走最稳的静态站点方式，这个仓库也支持直接从 `main / root` 发布。
+
+## 线上地址
+
+部署完成后，站点会在这个地址访问：
+
+```text
+https://zhanshenwa.github.io/web-studio/
+```
 
 ## 你可以继续扩展的方向
 
