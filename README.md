@@ -19,6 +19,17 @@
 - 可切换的场景指挥台，展示不同项目下的任务分配
 - GitHub 上传指南和仓库结构示意
 
+## 仓库结构
+
+```text
+agent-web-studio/
+├── index.html
+├── styles.css
+├── script.js
+├── README.md
+└── .nojekyll
+```
+
 ## 本地预览
 
 这个项目是纯静态网页，直接打开 `index.html` 就能看。
@@ -67,7 +78,7 @@ git push -u origin main
 - `Branch: main`
 - `Folder: / (root)`
 
-如果你希望走最稳的静态站点方式，这个仓库也支持直接从 `main / root` 发布。
+如果你希望走最稳的静态站点方式，这个仓库也支持直接从 `main / root` 发布，不需要额外的 Pages 工作流文件。
 
 ## 线上地址
 

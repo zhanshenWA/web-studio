@@ -41,8 +41,23 @@
     <main id="top" class="page">
       <section class="hero">
         <div class="hero-copy">
-          <p class="eyebrow">GitHub-ready demo product</p>
-          <h1>把网页开发做成可编排、可复核、可展示的 AI 流水线</h1>
+          <div class="eyebrow-row">
+            <p class="eyebrow">GitHub-ready demo product</p>
+            <span class="live-pill"><i></i> live showcase</span>
+          </div>
+
+          <div class="hero-meta">
+            <span class="meta-pill">Codex orchestrates</span>
+            <span class="meta-pill">OpenClaw distributes</span>
+            <span class="meta-pill meta-pill-accent">GitHub Pages ready</span>
+          </div>
+
+          <h1>
+            <span>把网页开发做成</span>
+            <span>可编排、可复核、</span>
+            <span>可展示的 AI</span>
+            <span>流水线</span>
+          </h1>
           <p class="lede">
             这个产品展示了如何把 <strong>Codex</strong>、<strong>OpenClaw</strong>、
             <strong>GPT-5.4</strong>、<strong>GPT-5.5</strong> 和
@@ -53,6 +68,23 @@
           <div class="cta-row">
             <a class="btn btn-primary" href="#command-center">打开指挥台</a>
             <a class="btn btn-secondary" href="#repo-guide">看上传指南</a>
+          </div>
+
+          <div class="hero-strip" aria-label="关键数据">
+            <div>
+              <strong>70%</strong>
+              <span>效率提升</span>
+            </div>
+            <span class="strip-divider" aria-hidden="true"></span>
+            <div>
+              <strong>1.5 - 2.0 亿</strong>
+              <span>日均 token</span>
+            </div>
+            <span class="strip-divider" aria-hidden="true"></span>
+            <div>
+              <strong>4 组模型</strong>
+              <span>协同编排</span>
+            </div>
           </div>
 
           <div class="hero-facts" aria-label="核心指标">
@@ -76,6 +108,27 @@
         </div>
 
         <div class="hero-panel">
+          <article class="glass-card showcase-card">
+            <div class="showcase-head">
+              <span class="showcase-kicker">pipeline preview</span>
+              <span class="showcase-state"><i></i> active</span>
+            </div>
+            <div class="pipeline" aria-label="Agent pipeline">
+              <span class="pipeline-node pipeline-node-main">Codex</span>
+              <i></i>
+              <span class="pipeline-node">OpenClaw</span>
+              <i></i>
+              <span class="pipeline-node">GPT-5.4</span>
+              <i></i>
+              <span class="pipeline-node">GPT-5.5</span>
+              <i></i>
+              <span class="pipeline-node">GPT-5.3-codex</span>
+            </div>
+            <p>
+              主 Agent 拆解目标，子 Agent 并行处理生成、修复和复核，最终输出可直接发布的网页成品。
+            </p>
+          </article>
+
           <article class="glass-card token-card">
             <p>每日 token 使用量</p>
             <h2>1.5 - 2.0 亿</h2>
@@ -262,7 +315,7 @@
 ├── styles.css
 ├── script.js
 ├── README.md
-└── .github/workflows/pages.yml</pre>
+└── .nojekyll</pre>
           </article>
 
           <article class="steps-card">

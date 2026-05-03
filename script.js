@@ -120,8 +120,16 @@ const efficiencyBar = document.getElementById("efficiency-bar");
 const savedBar = document.getElementById("saved-bar");
 const tokenBar = document.getElementById("token-bar");
 const tabs = Array.from(document.querySelectorAll(".scenario-tab"));
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 function animateNumber(element, target, suffix = "", duration = 680) {
+  if (prefersReducedMotion) {
+    const formatted = target % 1 === 0 ? Math.round(target) : target.toFixed(2);
+    element.textContent = `${formatted}${suffix}`;
+    element.dataset.current = String(target);
+    return;
+  }
+
   const start = Number.parseFloat(element.dataset.current || "0");
   const begin = performance.now();
 
