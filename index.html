@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agent Web Studio</title>
+    <meta
+      name="description"
+      content="一个面向网页开发场景的多 Agent 协作演示产品，适合直接上传到 GitHub。"
+    />
+    <meta name="theme-color" content="#08111f" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="orb orb-a" aria-hidden="true"></div>
+    <div class="orb orb-b" aria-hidden="true"></div>
+    <div class="grid-overlay" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Agent Web Studio">
+        <span class="brand-mark">AW</span>
+        <span class="brand-copy">
+          <strong>Agent Web Studio</strong>
+          <span>多 Agent 网页开发演示产品</span>
+        </span>
+      </a>
+
+      <nav class="topnav" aria-label="主导航">
+        <a href="#workflow">工作流</a>
+        <a href="#command-center">指挥台</a>
+        <a href="#repo-guide">上传指南</a>
+      </nav>
+    </header>
+
+    <main id="top" class="page">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">GitHub-ready demo product</p>
+          <h1>把网页开发做成可编排、可复核、可展示的 AI 流水线</h1>
+          <p class="lede">
+            这个产品展示了如何把 <strong>Codex</strong>、<strong>OpenClaw</strong>、
+            <strong>GPT-5.4</strong>、<strong>GPT-5.5</strong> 和
+            <strong>GPT-5.3-codex</strong> 协同起来，完成需求拆解、页面生成、样式修复、联调和验收。
+            它适合直接作为 GitHub 仓库展示，也适合放进作品集、申报材料或演示页面。
+          </p>
+
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#command-center">打开指挥台</a>
+            <a class="btn btn-secondary" href="#repo-guide">看上传指南</a>
+          </div>
+
+          <div class="hero-facts" aria-label="核心指标">
+            <article class="fact-card">
+              <strong>70%</strong>
+              <span>网页交付效率提升</span>
+            </article>
+            <article class="fact-card">
+              <strong>50%+</strong>
+              <span>整体时间节省</span>
+            </article>
+            <article class="fact-card">
+              <strong>1.5 - 2.0 亿</strong>
+              <span>日均 token 消耗</span>
+            </article>
+            <article class="fact-card">
+              <strong>4 组模型</strong>
+              <span>协同分工</span>
+            </article>
+          </div>
+        </div>
+
+        <div class="hero-panel">
+          <article class="glass-card token-card">
+            <p>每日 token 使用量</p>
+            <h2>1.5 - 2.0 亿</h2>
+            <span>用于页面骨架生成、组件补全、联调排错和复核。</span>
+            <div class="meter">
+              <i></i>
+            </div>
+          </article>
+
+          <div class="mini-grid">
+            <article class="glass-card mini-card">
+              <p>核心能力</p>
+              <strong>任务拆解 + 并行执行</strong>
+              <span>主 Agent 负责拆分目标，子 Agent 负责不同环节。</span>
+            </article>
+            <article class="glass-card mini-card">
+              <p>输出形态</p>
+              <strong>网页 + 仓库 + 说明文档</strong>
+              <span>既能展示给审核方，也能直接推到 GitHub。</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="metrics">
+        <article class="metric-card">
+          <span class="metric-label">需求拆解速度</span>
+          <strong>从 PRD 到模块树</strong>
+          <p>主 Agent 把页面目标拆成导航、首屏、证据、流程和 CTA 五段。</p>
+        </article>
+        <article class="metric-card">
+          <span class="metric-label">代码生成方式</span>
+          <strong>Codex 负责主骨架</strong>
+          <p>优先产出语义化 HTML、响应式布局和可维护组件结构。</p>
+        </article>
+        <article class="metric-card">
+          <span class="metric-label">复核流程</span>
+          <strong>GPT-5.5 做最终校验</strong>
+          <p>统一检查可访问性、浏览器兼容性、样式一致性和文案准确性。</p>
+        </article>
+        <article class="metric-card">
+          <span class="metric-label">GitHub 适配</span>
+          <strong>可直接发布 Pages</strong>
+          <p>仓库结构简洁，打开 `index.html` 就能预览，推上 GitHub 即可展示。</p>
+        </article>
+      </section>
+
+      <section id="workflow" class="workflow">
+        <div class="section-head">
+          <p>工作流</p>
+          <h2>从需求到上线的四段式协作</h2>
+          <span>这是这个产品最适合展示给外部审核或 GitHub 访客的核心部分。</span>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-card">
+            <span class="timeline-step">01</span>
+            <h3>需求接收</h3>
+            <p>
+              先由主 Agent 阅读任务目标，提取页面目标、关键模块和预期风格，再把模糊需求整理成可执行清单。
+            </p>
+            <div class="pill-row">
+              <span>Codex</span>
+              <span>OpenClaw</span>
+            </div>
+          </article>
+
+          <article class="timeline-card">
+            <span class="timeline-step">02</span>
+            <h3>并行生成</h3>
+            <p>
+              GPT-5.4 负责初版页面结构和样式，子 Agent 同时补全按钮、栅格、文案和交互细节，减少来回等待。
+            </p>
+            <div class="pill-row">
+              <span>GPT-5.4</span>
+              <span>组件化</span>
+            </div>
+          </article>
+
+          <article class="timeline-card">
+            <span class="timeline-step">03</span>
+            <h3>联调修复</h3>
+            <p>
+              GPT-5.3-codex 和 GPT-5.5 负责定位布局偏差、响应式问题、样式冲突和浏览器兼容性问题。
+            </p>
+            <div class="pill-row">
+              <span>GPT-5.3-codex</span>
+              <span>修复链路</span>
+            </div>
+          </article>
+
+          <article class="timeline-card">
+            <span class="timeline-step">04</span>
+            <h3>验收发布</h3>
+            <p>
+              最终输出一份可读、可演示、可部署的网页成品，并附上 README 和 GitHub Pages 发布说明。
+            </p>
+            <div class="pill-row">
+              <span>GitHub Pages</span>
+              <span>作品集</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="command-center" class="command-center">
+        <div class="section-head">
+          <p>指挥台</p>
+          <h2>切换不同网页项目场景</h2>
+          <span>点击不同按钮，右侧会同步更新任务列表、模型组合和指标。</span>
+        </div>
+
+        <div class="scenario-switcher" role="tablist" aria-label="场景切换">
+          <button class="scenario-tab active" type="button" data-scenario="landing">
+            落地页
+          </button>
+          <button class="scenario-tab" type="button" data-scenario="dashboard">
+            仪表盘
+          </button>
+          <button class="scenario-tab" type="button" data-scenario="bugfix">
+            Bug 修复
+          </button>
+        </div>
+
+        <div class="board">
+          <div class="board-main">
+            <div class="board-copy">
+              <span class="badge" id="scenario-chip">Codex 主 Agent</span>
+              <h3 id="scenario-title">Landing Page Sprint</h3>
+              <p id="scenario-summary">
+                围绕产品首屏和转化链路，主 Agent 先拆模块，再由子 Agent 同时生成布局、文案和视觉细节。
+              </p>
+            </div>
+
+            <div id="task-list" class="task-list" aria-live="polite"></div>
+          </div>
+
+          <aside class="board-side">
+            <article class="side-card">
+              <p>当前组合</p>
+              <div id="stack-tags" class="tag-row"></div>
+            </article>
+
+            <article class="side-card metrics-side">
+              <div class="side-metric">
+                <span>效率提升</span>
+                <strong id="efficiency-value">70%</strong>
+                <div class="bar"><i id="efficiency-bar"></i></div>
+              </div>
+              <div class="side-metric">
+                <span>节省时间</span>
+                <strong id="saved-value">58%</strong>
+                <div class="bar"><i id="saved-bar"></i></div>
+              </div>
+              <div class="side-metric">
+                <span>日均 token</span>
+                <strong id="token-value">1.68 亿</strong>
+                <div class="bar"><i id="token-bar"></i></div>
+              </div>
+            </article>
+
+            <article class="side-card">
+              <p>产出结论</p>
+              <strong id="outcome-value">首屏上线更快，沟通轮次更少，展示页可直接发 GitHub Pages。</strong>
+              <span id="scenario-note">
+                这个场景特别适合做作品集主页、申请材料展示页和 GitHub 仓库首页。
+              </span>
+            </article>
+          </aside>
+        </div>
+      </section>
+
+      <section id="repo-guide" class="repo-guide">
+        <div class="section-head">
+          <p>上传准备</p>
+          <h2>直接放到 GitHub 的目录结构</h2>
+          <span>这个仓库已经按静态网页产品来组织，适合你直接推送并打开 Pages。</span>
+        </div>
+
+        <div class="guide-grid">
+          <article class="tree-card">
+            <pre>agent-web-studio/
+├── index.html
+├── styles.css
+├── script.js
+├── README.md
+└── .github/workflows/pages.yml</pre>
+          </article>
+
+          <article class="steps-card">
+            <ol class="step-list">
+              <li>在本地执行 `git init`、`git add .` 和 `git commit`，生成首个版本。</li>
+              <li>到 GitHub 新建同名仓库，把远程地址绑定到 `origin`。</li>
+              <li>推送 `main` 分支后，在仓库设置里启用 GitHub Pages 或 Actions 发布。</li>
+            </ol>
+
+            <a class="btn btn-primary" href="https://github.com/new" target="_blank" rel="noreferrer">
+              去创建仓库
+            </a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Agent Web Studio · 一个适合 GitHub 展示的网页协作产品示例</p>
+      <span>Codex / OpenClaw / GPT-5.4 / GPT-5.5 / GPT-5.3-codex</span>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
